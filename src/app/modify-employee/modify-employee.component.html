@@ -1,0 +1,28 @@
+<form class="form">
+    <div class="formRegister" *ngIf="textButton == 'Modificar'">
+        <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" [(ngModel)]="nombreValor" placeholder="Nombre" autocomplete="off">
+        </div>
+        <div class="field">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" [(ngModel)]="apellidoValor" placeholder="Apellido" autocomplete="off">
+        </div>
+        <div class="field">
+            <label for="trabajo">Trabajo</label>
+            <input type="text" name="trabajo" id="trabajo" [(ngModel)]="trabajoValor" placeholder="Trabajo" autocomplete="off">
+        </div>
+        <div class="field">
+            <label for="pago">Pago</label>
+            <input type="number" name="pago" id="pago" [(ngModel)]="pagoValor" placeholder="Pago" autocomplete="off">    
+        </div>
+    </div>
+    
+
+    <div class="submit">
+        <button class="toWorkInput" (click)="modifyE()">{{ textButton }}</button>
+        <span 
+        *ngIf="errorField"
+        class="errorField">Completa los campos correctamente</span>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+<div class="wrapper">
+    <h1>¿Quieres trabajo?</h1>
+    <h2>registrate para empezar a trabajar</h2>
+    <br><br>
+    <h2>Registrate:</h2>
+    <form class="form">
+        <div class="formRegister">
+            <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" [(ngModel)]="nombreValor" placeholder="Nombre" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" [(ngModel)]="apellidoValor" placeholder="Apellido" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="trabajo">Trabajo</label>
+                <input type="text" name="trabajo" id="trabajo" [(ngModel)]="trabajoValor" placeholder="Trabajo" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="pago">Pago</label>
+                <input type="number" name="pago" id="pago" [(ngModel)]="pagoValor" placeholder="Pago" autocomplete="off">    
+            </div>
+        </div>
+        
+
+        <div class="submit">
+            <button class="toWorkInput" (click)="aTrabajar()">A trabajar</button>
+            <span 
+            *ngIf="errorField"
+            class="errorField">Completa los campos correctamente</span>
+        </div>
+    </form>
+    <h4 *ngIf="employees.length">Empleados:</h4>
+    <app-employee-list [employee]="employees"></app-employee-list>
+</div>

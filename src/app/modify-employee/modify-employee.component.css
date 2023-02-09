@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.returnHome{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    padding: .5em 1em;
+    border: none;
+    background-color: #26f;
+    color: #fff;
+    transition: transform .3s, padding .2s;
+}
+.returnHome:hover{
+    padding: .6em 1em;
+    transform: translateY(-5px);
+    background-color: #48f;
+}
+.form{
+    width: min-content;
+    margin: 0 auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formRegister{
+    display: flex;
+    gap: 2em;
+    width: min-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+.formRegister .field{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.formRegister .field input{
+    padding: .5em;
+    width: 200px;
+    height: 40px;
+}
+
+
+.form .submit{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: flex-end;
+    justify-content: center;
+}
+.toWorkInput{
+    margin-top: 2em;
+    width: 200px;
+    height: 40px;
+    background-color: #26f;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    transition: transform .3s;
+}
+.toWorkInput:hover{
+    background-color: #48f;
+    transform: translateY(-5px);
+}
+.errorField{
+    color: #f00;
+    border: 1px solid #f00;
+    padding: .4em 1em;
+    background-color: #fcc;
+    height: min-content;
+}

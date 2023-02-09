@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    gap: 1.5em;
+}
+.nav a{
+    text-decoration: none;
+    color: #26f;
+    transition: transform .3s;
+}
+.nav a:hover{
+    transform: translateY(-3px);
+}
